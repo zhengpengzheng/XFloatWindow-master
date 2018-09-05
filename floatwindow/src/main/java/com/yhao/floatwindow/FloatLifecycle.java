@@ -27,7 +27,7 @@ class FloatLifecycle extends BroadcastReceiver implements Application.ActivityLi
     private Handler mHandler;
     private Class[] activities;
     private boolean showFlag;
-    private int startCount;
+    private int startCount=1;
     private int resumeCount;
     private boolean appBackground;
     private LifecycleListener mLifecycleListener;
