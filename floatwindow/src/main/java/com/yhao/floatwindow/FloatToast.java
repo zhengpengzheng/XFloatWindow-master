@@ -17,7 +17,6 @@ class FloatToast extends FloatView {
 
 
     private Toast toast;
-
     private Object mTN;
     private Method show;
     private Method hide;

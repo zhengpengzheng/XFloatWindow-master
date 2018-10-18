@@ -16,15 +16,22 @@ import com.yhao.floatwindow.Screen;
 public class A_Activity extends AppCompatActivity {
 
 
+    boolean isshow=true;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_a);
         setTitle("A");
-
+        FloatWindow.get().hide();
     }
 
     public void change(View view) {
-        startActivity(new Intent(this, B_Activity.class));
+//        startActivity(new Intent(this, B_Activity.class));
+        if (isshow){
+            FloatWindow.get().show();
+        }else {
+            FloatWindow.get().hide();
+        }
+        isshow=!isshow;
     }
 }

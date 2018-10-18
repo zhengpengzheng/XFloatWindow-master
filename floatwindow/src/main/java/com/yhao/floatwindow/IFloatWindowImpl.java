@@ -58,7 +58,8 @@ public class IFloatWindowImpl extends IFloatWindow {
         mFloatLifecycle = new FloatLifecycle(mB.mApplicationContext, mB.mShow, mB.mActivities, new LifecycleListener() {
             @Override
             public void onShow() {
-                show();
+//                show();
+                if (isShowing()) show();
             }
 
             @Override

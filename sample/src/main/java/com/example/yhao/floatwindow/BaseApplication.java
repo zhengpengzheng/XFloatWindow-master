@@ -37,14 +37,12 @@ public class BaseApplication extends Application {
                 .setView(imageView)
                 .setWidth(100) //设置悬浮控件宽高
                 .setHeight(1000)
-                .setX(Screen.width, 0.8f)
-                .setY(Screen.height, 0.3f)
                 .setMoveType(MoveType.inactive,100,-100)
                 .setMoveStyle(500, new BounceInterpolator())
                 .setFilter(true, A_Activity.class, C_Activity.class)
                 .setViewStateListener(mViewStateListener)
                 .setPermissionListener(mPermissionListener)
-                .setDesktopShow(true)
+                .setDesktopShow(false)
                 .build();
 
 
@@ -56,6 +54,7 @@ public class BaseApplication extends Application {
                 FloatWindow.get().updateY(200);
 
                 FloatWindow.get().updateWithheight(100,1000);
+                FloatWindow.get().hide();
             }
         });
     }
